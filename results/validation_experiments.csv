@@ -1,0 +1,12 @@
+method,model,setting,val_accuracy,val_macro_f1,params_M,images_per_sec_T4
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,a photo of a {}.,0.938,0.939,151,202
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,a real estate photo of a {}.,0.934,0.934,151,
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,an interior photo of a {} in a home.,0.935,0.935,151,
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,a professional listing photo of a {}.,0.934,0.933,151,
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,"a photo of a {}, a room in a house.",0.938,0.938,151,
+zero-shot,ViT-B-32 / laion2b_s34b_b79k,ENSEMBLE (all templates),0.937,0.936,151,
+zero-shot,ViT-B-16-SigLIP / webli,a photo of a {}.,0.944,0.945,203,60
+zero-shot,ViT-L-14 / laion2b_s32b_b82k,a photo of a {}.,0.945,0.946,428,17
+linear probe,ViT-B-32 / laion2b_s34b_b79k,LogReg C=0.1,0.944,0.945,151,
+fine-tune,resnet18 / ImageNet,"5 epochs, MixUp/CutMix 30%, best epoch 4",0.822,0.825,11,
+fine-tune,resnet18 / ImageNet,"12 epochs, no MixUp, best epoch 9",0.879,0.882,11,

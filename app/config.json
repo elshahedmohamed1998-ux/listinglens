@@ -1,0 +1,76 @@
+{
+  "clip_model": "ViT-B-32",
+  "clip_pretrained": "laion2b_s34b_b79k",
+  "classes": ["Bathroom", "Bedroom", "Dinning", "Kitchen", "Livingroom"],
+  "class_names": {
+    "Bathroom": "bathroom",
+    "Bedroom": "bedroom",
+    "Dinning": "dining room",
+    "Kitchen": "kitchen",
+    "Livingroom": "living room"
+  },
+  "room_template": "a photo of a {}.",
+  "probe_file": "models/linear_probe_ViT-B-32.joblib",
+  "probe_C": 0.1,
+  "tags": {
+    "swimming pool": {
+      "pos": ["a photo of a home with a swimming pool", "a swimming pool next to a house"],
+      "neg": ["a photo of a home without a swimming pool", "a room in a house with no pool"]
+    },
+    "garden": {
+      "pos": ["a photo of a home with a green garden", "a view of a garden with grass and plants"],
+      "neg": ["a photo of a room with no garden", "an indoor room with no plants or grass outside"]
+    },
+    "balcony": {
+      "pos": ["a photo of a room with a balcony", "a balcony or terrace attached to an apartment"],
+      "neg": ["a photo of a room without a balcony", "a closed room with no balcony or terrace"]
+    },
+    "sea view": {
+      "pos": ["a room with a view of the sea", "a window overlooking the ocean or sea"],
+      "neg": ["a room with no sea view", "a window with a view of buildings or a street"]
+    },
+    "open kitchen": {
+      "pos": ["an open-plan kitchen connected to the living room", "a kitchen open to the dining and living area"],
+      "neg": ["a closed separate kitchen with walls", "a room with no kitchen"]
+    },
+    "large windows": {
+      "pos": ["a bright room with large windows", "a room with floor-to-ceiling windows"],
+      "neg": ["a room with small windows", "a dark room with no large windows"]
+    },
+    "air conditioning": {
+      "pos": ["a room with an air conditioner on the wall", "a split air conditioning unit mounted on a wall"],
+      "neg": ["a room with no air conditioner", "a wall with no air conditioning unit"]
+    },
+    "unfinished walls": {
+      "pos": ["an unfinished room with bare concrete and brick walls", "a room under construction with no finishing"],
+      "neg": ["a fully finished and painted room", "a finished room with painted walls and flooring"]
+    }
+  },
+  "tag_thresholds": {
+    "swimming pool": 0.6,
+    "garden": 0.6,
+    "balcony": 0.6,
+    "sea view": 0.8,
+    "open kitchen": 0.7,
+    "large windows": 0.8,
+    "air conditioning": 0.7,
+    "unfinished walls": 0.8
+  },
+  "quality": {
+    "sharpness_min": 500,
+    "brightness_min": 60,
+    "brightness_max": 210,
+    "contrast_min": 30,
+    "min_short_side": 200,
+    "sharpness_good": 2165.6,
+    "contrast_good": 59.1,
+    "weights": {"sharpness": 0.55, "brightness": 0.3, "contrast": 0.15},
+    "analysis_size": 224
+  },
+  "cover": {
+    "room_priority": {"Livingroom": 1.0, "Kitchen": 0.8, "Dinning": 0.7, "Bedroom": 0.6, "Bathroom": 0.3},
+    "quality_weight": 0.7,
+    "room_weight": 0.3
+  },
+  "uncertain_gap": 0.25
+}

@@ -1,0 +1,8 @@
+class,precision,recall,f1,support
+bathroom,0.978,0.989,0.984,91
+bedroom,0.984,0.979,0.981,187
+dining room,0.939,0.891,0.914,174
+kitchen,0.905,0.924,0.915,145
+living room,0.924,0.953,0.938,191
+macro avg,0.946,0.947,0.946,788
+accuracy,,,0.944,788

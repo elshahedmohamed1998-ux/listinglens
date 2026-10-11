@@ -218,3 +218,41 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ---- ListingLens ----
+# Secrets: never commit API keys
+kaggle.json
+.env
+*.key
+
+# Data and large artifacts (download or regenerate instead)
+data/
+datasets/
+*.npz
+*.npy
+*.pt
+*.pth
+*.safetensors
+checkpoints/
+embeddings/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Gradio
+.gradio/
+flagged/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

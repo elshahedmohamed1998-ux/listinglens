@@ -1,0 +1,6 @@
+model,method,test_accuracy,test_macro_f1,training_time,notes
+SigLIP ViT-B-16,zero-shot,0.952,0.954,none,203M params
+CLIP ViT-L-14,zero-shot,0.949,0.951,none,"428M params, slowest"
+CLIP ViT-B-32,zero-shot,0.947,0.950,none,"template 'a photo of a {}.', 151M params"
+CLIP ViT-B-32 + LogReg,linear probe,0.944,0.946,1.9 s (+ ~1 min to embed images),"C=0.1, CLIP frozen, chosen on validation"
+resnet18 (ImageNet),fine-tune,0.891,0.893,8.3 min (12 epochs),"best epoch 9, 11M params, augmentation + label smoothing"
